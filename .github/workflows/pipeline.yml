@@ -19,3 +19,9 @@ jobs:
         cache: 'npm'
     - name: Install dependecies
       run: npm ci
+    - name: Start Backend
+      run: npm run start:be & #  & -> държи го да работи в background
+    - name: Start Frontend
+      run: npm run start:fe &
+    - name: Execute the UI tests
+      run: npm run test:ui
